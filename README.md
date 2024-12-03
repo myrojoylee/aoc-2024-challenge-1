@@ -10,7 +10,7 @@ Original challenge site from Amy Dutton [here](https://www.adventofcss.com/).
 
 ## Approach
 
-A final webpage showing the layout for five or more photos is shown [here]().
+A final webpage showing the layout for five or more photos is shown [here](https://myrojoylee.github.io/aoc-2024-challenge-1/).
 
 Demo below showing different layouts:
 
