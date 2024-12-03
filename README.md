@@ -14,7 +14,7 @@ A final webpage showing the layout for five or more photos is shown [here](https
 
 Demo below showing different layouts:
 
-WIP
+![Demo](assets/advent-2024-day-1.gif)
 
 ## Notes/Improvements
 
