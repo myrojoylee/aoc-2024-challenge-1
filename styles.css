@@ -119,6 +119,10 @@ p {
     font-size: 48px;
 }
 
+section:has(img:nth-of-type(6)) img:nth-of-type(5) {
+    filter: brightness(0.7); 
+}
+
 section:has(img:nth-of-type(6)) p{
     color: white;
 }
