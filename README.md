@@ -14,7 +14,7 @@ A final webpage showing the layout for one photo is shown [here](https://myrojoy
 
 Demo below rotating between different layouts:
 
-WIP
+![Demo](assets/advent-2024-day-1.gif)
 
 ## Notes/Improvements
 
