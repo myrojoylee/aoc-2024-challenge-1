@@ -8,7 +8,9 @@ Here is a photo gallery with conditional layouts that depend on the number of ph
 
 Original challenge site from Amy Dutton [here](https://www.adventofcss.com/).
 
-## Approach
+## Approach/Demo
+
+Vanilla HTML/CSS was used for this challenge.
 
 A final webpage showing the layout for one photo is shown [here](https://myrojoylee.github.io/aoc-2024-challenge-1/).
 
@@ -18,7 +20,7 @@ Demo below rotating between different layouts:
 
 ## Notes/Improvements
 
-Since it is a CSS challenge, there were limitations to conditional layouts. Should there be an opportunity to modify this using JS, the code could be improved instead of using pseudo-classes.
+Dynamic CSS counters were something new here and was adapted after reviewing the [solution](https://github.com/AdventOfCSS/2024-12-01__photo-gallery/tree/main). 
 
 ## Photo Credits
 
