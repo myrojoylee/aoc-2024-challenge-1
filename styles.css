@@ -26,12 +26,14 @@ header {
 
 section {
     position: relative;
+    counter-reset: img-count -5;
     background-color: white;
     display: grid;
     width: 568px;
     height: 360px;
     padding: 16px 14px;
     gap: 14px;
+    overflow: hidden;
 }
 
 img {
@@ -42,86 +44,93 @@ img {
     overflow: hidden;
 }
 
-section:has(img:nth-of-type(1):last-of-type) {
+section:has(div:nth-child(6)) {
+    >div::before {
+        visibility: hidden;
+        content: "+ " counter(img-count);
+        counter-increment: img-count;
+        position: absolute;
+        top: 236px;
+        left: 417px;
+        color: white;
+        font-family: "Inter", 'sans-serif';
+        font-size: 48px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 52px;
+        width: 112px;
+        height: 52px;
+        z-index: 2;
+    }
+
+    >div:last-of-type::before {
+        visibility: visible;
+    }
+
+}
+
+section:has(div:nth-child(6))>div:nth-child(n+6) img {
+    display: none;
+}
+
+section:has(div:nth-of-type(1):last-of-type) {
     grid-template-columns: 540px;
     grid-template-rows: 328px;
-    grid-template-areas: 
+    grid-template-areas:
         "img1";
 }
 
-section:has(img:nth-of-type(2):last-of-type) {
+section:has(div:nth-of-type(2):last-of-type) {
     grid-template-columns: 264px 264px;
     grid-template-rows: 328px;
-    grid-template-areas: 
+    grid-template-areas:
         "img1 img2";
 }
 
-section:has(img:nth-of-type(3):last-of-type) {
+section:has(div:nth-of-type(3):last-of-type) {
     grid-template-columns: 264px 264px;
     grid-template-rows: 158px 158px;
-    grid-template-areas: 
+    grid-template-areas:
         "img1 img2"
         "img3 img3";
 }
 
-section:has(img:nth-of-type(4):last-of-type) {
+section:has(div:nth-of-type(4):last-of-type) {
     grid-template-columns: 264px 264px;
     grid-template-rows: 158px 158px;
-    grid-template-areas: 
+    grid-template-areas:
         "img1 img2"
         "img3 img4";
 }
 
-section:has(img:nth-of-type(5)) {
+section:has(div:nth-of-type(5)) {
     grid-template-columns: 78px 80px 78px 80px 78px 78px;
     grid-template-rows: 158px 158px;
-    grid-template-areas: 
+    grid-template-areas:
         "img1 img1 img1 img2 img2 img2"
         "img3 img3 img4 img4 img5 img5";
 }
 
-section img:nth-child(n+6) {
-    display: none;
-}
-
-section img:nth-child(1) {
+section div:nth-child(1) {
     grid-area: img1;
 }
 
-section img:nth-child(2) {
+section div:nth-child(2) {
     grid-area: img2;
 }
 
-section img:nth-child(3) {
+section div:nth-child(3) {
     grid-area: img3;
 }
 
-section img:nth-child(4) {
+section div:nth-child(4) {
     grid-area: img4;
 }
 
-section img:nth-child(5) {
+section div:nth-child(5) {
     grid-area: img5;
 }
 
-p {
-    position: absolute;
-    width: 112px;
-    height: 52px;
-    line-height: 52px;
-    text-align: center;
-    top: 236px;
-    left: 417px;
-    color: transparent;
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-    font-size: 48px;
-}
-
-section:has(img:nth-of-type(6)) img:nth-of-type(5) {
-    filter: brightness(0.7); 
-}
-
-section:has(img:nth-of-type(6)) p{
-    color: white;
+section:has(div:nth-of-type(6)) div:nth-of-type(5) img {
+    filter: brightness(0.7);
 }
